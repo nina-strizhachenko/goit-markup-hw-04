@@ -211,6 +211,20 @@ img {
 .header-contact-link:focus {
   color: var(--accent-color);
 }
+.header-contact-icon {
+  fill: var(--primary-shade-2-text-color);
+}
+.header-contact-icon {
+  margin-right: 10px;
+}
+.header-contact-icon {
+  fill: currentColor;
+}
+.header-contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ------HERO----- */
 .main-section {
   font-weight: 900;
@@ -223,6 +237,7 @@ img {
   background-color: var(--secondary-bgr-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
+  max-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -317,16 +332,16 @@ img {
   align-items: center;
   justify-content: center;
 }
-.teammate-social-link:hover .teammate-social-link:focus {
+.teammate-social-link:hover,
+.teammate-social-link:focus {
   background-color: var(--accent-color);
 }
-
+.teammate-social-link:hover .teammate-social-icon,
+.teammate-social-link:focus .teammate-social-icon {
+  fill: var(--secondary-text-color);
+}
 .teammate-social-icon {
   fill: #afb1b8;
-}
-.teammate-social-icon:hover,
-.teammate-social-icon:focus {
-  background-color: var(--primary-bgr-color);
 }
 .teammate-social-list {
   display: flex;
@@ -383,18 +398,10 @@ img {
   flex-wrap: wrap;
 }
 .portfolio-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
   border: 1px solid var(--border-portfolio-item-color);
 }
 .portfolio-item {
   flex-basis: calc((100% - 60px) / 3);
-}
-.portfolio-item {
-  margin-right: 30px;
-}
-.portfolio-item:nth-child(3n) {
-  margin-right: 0;
 }
 .portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
