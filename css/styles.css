@@ -12,6 +12,7 @@
 
   --border-header-color: #ececec;
   --border-portfolio-item-color: #eeeeee;
+  --border-clients-color: #afb1b8;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -250,6 +251,23 @@ img {
 }
 
 /* --------особенности--------- */
+
+.special-picture {
+  display: flex;
+}
+.pictures-list {
+  display: flex;
+}
+.picture-item + .picture-item {
+  margin-left: 30px;
+}
+.picture-item {
+  width: 270px;
+
+  background-color: var(--secondary-shade-bgr-color);
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
 .special {
   padding-bottom: 47px;
 }
@@ -341,11 +359,48 @@ img {
   fill: var(--secondary-text-color);
 }
 .teammate-social-icon {
-  fill: #afb1b8;
+  fill: var(--border-clients-color);
 }
 .teammate-social-list {
   display: flex;
   justify-content: center;
+}
+/* -----ПОСТОЯННЫЕ КЛИЕНТЫ----- */
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--border-clients-color);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--accent-color);
+}
+.client-item + .client-item {
+  margin-left: 30px;
+}
+.client-link {
+  width: 106px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+.client-icon {
+  fill: currentColor;
+}
+.client-icon:hover,
+.client-icon:focus {
+  color: var(--accent-color);
 }
 /* ----------ПОДВАЛ---------- */
 .address {
