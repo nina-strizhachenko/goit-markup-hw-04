@@ -8,6 +8,7 @@
 
   --primary-bgr-color: #ffffff;
   --secondary-bgr-color: #2f303a;
+  --footer-social-bgr-color: rgba(255, 255, 255, 0.1);
   --secondary-shade-bgr-color: #f5f4fa;
 
   --border-header-color: #ececec;
@@ -248,17 +249,12 @@ img {
 }
 
 /* --------особенности--------- */
-
-.pictures-list {
-  display: flex;
-}
-.picture-item + .picture-item {
+.pictures + .pictures {
   margin-left: 30px;
 }
-.picture-item {
+.pictures {
   display: flex;
   justify-content: center;
-  width: 270px;
   background-color: var(--secondary-shade-bgr-color);
   padding: 25px 100px;
   margin-bottom: 30px;
@@ -384,12 +380,12 @@ img {
 .client-link:focus {
   border-color: var(--accent-color);
 }
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent-color);
+}
 .client-icon {
   fill: currentColor;
-}
-.client-icon:hover,
-.client-icon:focus {
-  color: var(--accent-color);
 }
 /* ----------ПОДВАЛ---------- */
 .address {
@@ -434,6 +430,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  margin-bottom: 20px;
 }
 .join-list {
   display: flex;
@@ -447,14 +444,13 @@ img {
   background-color: var(--accent-color);
 }
 .join-link {
-  margin-top: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-social-bgr-color);
 }
 /* ---------Портфолио------- */
 .filter-list {
