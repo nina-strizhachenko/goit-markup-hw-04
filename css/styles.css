@@ -99,7 +99,7 @@ img {
   background-color: var(--secondary-shade-bgr-color);
   border-radius: 4px;
   padding: 6px 22px;
-  border: 1px solid var(--secondary-shade-bgr-color);
+  border: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -214,9 +214,6 @@ img {
   color: var(--accent-color);
 }
 .header-contact-icon {
-  fill: var(--primary-shade-2-text-color);
-}
-.header-contact-icon {
   margin-right: 10px;
 }
 .header-contact-icon {
@@ -237,6 +234,7 @@ img {
   text-transform: uppercase;
   color: var(--secondary-text-color);
   background-color: var(--secondary-bgr-color);
+  background-size: cover;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -251,9 +249,6 @@ img {
 
 /* --------особенности--------- */
 
-.special-picture {
-  display: flex;
-}
 .pictures-list {
   display: flex;
 }
@@ -261,11 +256,13 @@ img {
   margin-left: 30px;
 }
 .picture-item {
+  display: flex;
+  justify-content: center;
   width: 270px;
-
   background-color: var(--secondary-shade-bgr-color);
   padding: 25px 100px;
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 .special {
   padding-bottom: 47px;
@@ -370,29 +367,22 @@ img {
   justify-content: center;
   align-items: center;
 }
-.client-item {
-  display: flex;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--border-clients-color);
-  border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-}
-.client-item:hover,
-.client-item:focus {
-  border-color: var(--accent-color);
-}
 .client-item + .client-item {
   margin-left: 30px;
 }
 .client-link {
-  width: 106px;
-  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--border-clients-color);
+  border-radius: 4px;
   color: #afb1b8;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
 }
 .client-icon {
   fill: currentColor;
@@ -452,7 +442,11 @@ img {
 .join-item + .join-item {
   margin-left: 10px;
 }
-.join-item {
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--accent-color);
+}
+.join-link {
   margin-top: 20px;
   border-radius: 50%;
   display: flex;
@@ -461,10 +455,6 @@ img {
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
-}
-.join-item:hover,
-.join-item:focus {
-  background-color: var(--accent-color);
 }
 /* ---------Портфолио------- */
 .filter-list {
